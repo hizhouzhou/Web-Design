@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+    <head>
+             <meta charset="utf-8">
+             <!--This is my first assignment.-->
+             <title>Assignment2_page1</title>
+    </head>
+
+    <body>
+        <form>
+                <div id="container" style="background-color:rgb(188, 217, 221);width:1100px">
+             <!--First line.-->
+             <!--"display:inline-block make multiple divs stays in one line"-->
+             <div id="rotate"  style="display:inline-block;background-color:#fff;height:2mm;width:10mm;-webkit-transform:rotate(-90deg);-moz-transform:rotate(-90deg);-ms-transform:rotate(-90deg);-o-transform: rotate(-90deg);float:left;padding-top:30px">Form</div>
+            <div id="form" style="width:75px;display:inline-block;background-color:#fff;font-size:10mm"><b>1040</b></div>
+            <div id="taxreturn" style="width:395px;display:inline-block;border-right:1px solid #000">Department of the Treasury—Internal Revenue Service &nbsp;&nbsp;(99)
+            <br/><span style="font-size:5mm"><b>U.S. Individual Income Tax Return</b></span></div>
+            <div id="year" style="width:70px;display:inline-block;border-right:1px solid #000;font-size:8mm">20<b>18</b></div> 
+            <div id="omb" style="width:150px;display:inline-block;border-right:1px solid #000">&nbsp;<br/>OMB No. 1545-0074</div> 
+            <div id="irs" style="width:350px;display:inline-block;">IRS Use Only—Do not write or staple in this space.</div>     
+              
+
+                   
+                   
+
+            <!--Second line.-->
+            <div id="filingstatus" style="display:inline-block;width:800px;border-top:1px solid #000;border-bottom:1px solid #000">
+                Filing status:
+            <input type="radio" name="filingstatus" value="Single" />Single
+            <input type="radio" name="filingstatus" value="Married filing jointly"/>Married filing jointly
+            <input type="radio" name="filingstatus" value="Married filing separately"/>Married filing separately
+            <input type="radio" name="filingstatus" value="Head of household"/>Head of household
+            <input type="radio" name="filingstatus" value="Qualifying widow(er)"/>Qualifying widow(er)
+            </div>
+            <div style="display:inline-block;width:250px;background-color:#fff;border-top:1px solid #000;">&nbsp;</div>
+
+            
+           <!--Third line, Name--> 
+           <div id="firstname" style="background-color:#fff;width:400px;display:inline-block;border-right:1px solid #000">Your first name and initial&nbsp&nbsp&nbsp&nbsp
+                <br/>
+                <input  type="text" name="firstname"  style="width:auto;border:0px" onkeyup="this.value=this.value.replace(/[^a-zA-Z]/g,'')"/></div>
+
+                <div id="lastname" style="background-color:#fff;width:400px;display:inline-block">Last name&nbsp&nbsp&nbsp&nbsp
+                        <br/>
+                        <input  type="text" name="lastname" style="width:auto;border:0px"  onkeyup="this.value=this.value.replace(/[^a-zA-Z]/g,'')"/></div>
+
+                        <div id="ssn" style="background-color:#fff;width:250px;display:inline-block;border-left:1px solid #000;border-top:1px solid #000">Your social security number&nbsp&nbsp&nbsp&nbsp
+                                <br/>
+                                <input type="tel" name="ssn" style="width:60px;border:0;border-right:1px dashed #000" pattern="[0-9]{3}" maxlength="3" minlength="3">
+                                <input type="tel" name="ssn" style="width:40px;border:0;border-right:1px dashed #000"  pattern="[0-9]{2}" maxlength="2" minlength="2">
+                                <input type="tel" name="ssn" style="width:80px;border:0"  pattern="[0-9]{4}" maxlength="4" minlength="4">
+                                
+                                
+                            </div>
+         
+
+           <!--Standard deduction--> 
+           <div id="deduction" style="width:1050px;border-top: 0.1px solid #000;border-bottom: 0.1px solid #000;">
+            Your standard deduction:
+            <input type="checkbox" name="deduction" value="dependent"/> Someone can claim you as a dependent &nbsp&nbsp&nbsp
+            <input type="checkbox" name="deduction" value="birthday"/> You were born before January 2, 1954 &nbsp&nbsp&nbsp
+            <input type="checkbox" name="deduction" value="blind"/>You are blind &nbsp&nbsp&nbsp
+           
+        
+           </div>
+          
+
+           <!--Spouse Name--> 
+           <div id="spousefirstname" style="background-color:#fff;width:400px;display:inline-block; border-right:1px solid #000">If joint return, spouse's first name and initial&nbsp&nbsp&nbsp&nbsp
+                <br/>
+                <input type="text" name="firstname" style="width:auto;border:0px"  onkeyup="this.value=this.value.replace(/[^a-zA-Z]/g,'')"/></div>
+
+                <div id="spouselastname" style="background-color:#fff;width:400px;display:inline-block; border-right:1px solid #000">Last name&nbsp&nbsp&nbsp&nbsp
+                        <br/>
+                        <input  type="text" name="lastname" style="width:auto;border:0px"  onkeyup="this.value=this.value.replace(/[^a-zA-Z]/g,'')"/></div>
+
+                        <div id="spousessn" style="background-color:#fff;width:250px;display:inline-block;">Spouse's social security number&nbsp&nbsp&nbsp&nbsp
+                                <br/>
+                                <input type="tel" name="ssn" style="width:60px;border:0;border-right:1px dashed #000"  pattern="[0-9]{3}"  maxlength="3" minlength="3">
+                                <input type="tel" name="ssn" style="width:40px;border:0;border-right:1px dashed #000" pattern="[0-9]{2}"  maxlength="2" minlength="2">
+                                <input type="tel" name="ssn" style="width:80px;border:0"  pattern="[0-9]{4}"  maxlength="4" minlength="4"></div>
+        
+           <!--Spouse standard deduction--> 
+           <div id="spouse_deduction" style="width:800px;border-top:1px solid #000;display:inline-block">
+            Spouse standard deduction:
+            <input type="checkbox" name="deduction" value="dependent"/> Someone can claim your spouse as a dependent &nbsp
+            <input type="checkbox" name="deduction" value="birthday"/> Spouse was born before January 2, 1954 &nbsp
+            <input type="checkbox" name="deduction" value="blind"/>Spouse is blind &nbsp&nbsp&nbsp
+            <input type="checkbox" name="deduction" value="dual-status"/>Spouse itemizes on a separate return or you were dual-status alien
+            
+           </div>
+           <div id="health_care" style="width:250px;border-left:1px solid #000;border-top:1px solid #000;display:inline-block">
+               <input type="checkbox" name="health" value="health"/>Full-year health care coverage or exempt (see inst.)
+           </div>
+           
+
+           <!--Home Address-->
+           <div style="width:700px;display:inline-block;border-right:1px solid #000;border-top:1px solid #000;background-color:#fff">Home address (number and street). If you have a P.O. box, see instructions.
+        <br/>
+    <input type="text" name="address" style="width:auto;border:0px"/></div>
+           <div style="width:100px;display:inline-block;border-right:1px solid #000;background-color:#fff;border-top:1px solid #000">Apt. no.
+        <br/>
+    <input type="text" name="aptnumber" style="width:50px;border:0px"/></div>
+           <div style="width:250px;display:inline-block;border-top:1px solid #000"><b>Presidential Election Campaign</b>
+        <br/>
+        (see inst.)&nbsp;
+    <input type="checkbox" name="election"/><b>You</b>
+    <input type="checkbox" name="election"/><b>Spouse</b></div>
+
+
+         <!--City-->
+         <div style="width:800px;display:inline-block;background-color:#fff;border-top:1px solid #000">City, town or post office, state, and ZIP code. If you have a foreign address, attach Schedule 6.
+            <br/>
+        <input type="text" name="city" style="width:auto;border:0px" /></div>
+        <div style="width:250px;display:inline-block;border-left:1px solid #000;border-top:1px solid #000">If more than four dependents,<br/>
+            see inst. and &#10004 here <b><span style="font-size:small"> &#9658 </span></b> 
+        <input type="checkbox" name="morethanfour"/></div>
+
+        <!--Dependents-->
+        <div style="width:350px;display:inline-block;border-right:1px solid #000;border-top:1px solid #000"><b>dependents</b>(see instructures)
+        <br/>
+    <b>(1)</b>First name   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Last name</div>
+
+        <div style="width:175px;display:inline-block;border-right:1px solid #000;border-top:1px solid #000">
+    <b>(2)</b>Social security number<br/>&nbsp;</div>
+
+        <div style="width:175px;display:inline-block;border-right:1px solid #000;border-top:1px solid #000">
+        <b>(3)</b>Relationship to you<br/>&nbsp;</div>
+
+        <div style="width:350px;display:inline-block;border-top:1px solid #000">
+            <b>(4)</b>&#10004 if qualifies for (see inst.):
+        <br/>
+        Child tax credit &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Credit for other dependents</div>
+
+
+        <!--line-->
+         <!--part1-->
+        <div style="width:350px;display:inline-block;border-right:1px solid #000;background-color:#fff;border-top:1px solid #000">
+        <input type="text" name="one" style="width:auto;border:0px"/>
+    
+    <div style="width:350px;display:inline-block;border-right:1px solid #000;background-color:#fff;border-top:1px solid #000">
+        <input type="text" name="two" style="width:auto;border:0px"/>
+    
+    <div style="width:350px;display:inline-block;border-right:1px solid #000;background-color:#fff;border-top:1px solid #000">
+        <input type="text" name="three" style="width:auto;border:0px"/>
+    
+    <div style="width:350px;display:inline-block;border-right:1px solid #000;background-color:#fff;border-top:1px solid #000;border-bottom:1px solid #000">
+        <input type="text" name="four" style="width:auto;border:0px"/>
+       </div></div></div></div>
+
+       <!--part2-->
+       <div style="width:175px;display:inline-block;border-right:1px solid #000;background-color:#fff;border-top:1px solid #000">
+        
+        <input type="tel" name="one2" style="width:48px;border:0px;border-right:1px dashed #000" pattern="[0-9]{3}" maxlength="3" minlength="3"/>
+        <input type="tel" name="one2" style="width:32px;border:0px;border-right:1px dashed #000" pattern="[0-9]{2}" maxlength="2" minlength="2">
+        <input type="tel" name="one2" style="width:64px;border:0px" pattern="[0-9]{4}" maxlength="4" minlength="4"/>
+    
+    <div style="width:175px;display:inline-block;border-right:1px solid #000;background-color:#fff;border-top:1px solid #000">
+        <input type="tel" name="two2" style="width:48px;border:0px;border-right:1px dashed #000" pattern="[0-9]{3}" maxlength="3" minlength="3">
+        <input type="tel" name="two2" style="width:32px;border:0px;border-right:1px dashed #000" pattern="[0-9]{2}" maxlength="2" minlength="2">
+        <input type="tel" name="two2" style="width:64px;border:0px" pattern="[0-9]{4}" maxlength="4" minlength="4">
+    
+    <div style="width:175px;display:inline-block;border-right:1px solid #000;background-color:#fff;border-top:1px solid #000">
+        <input type="tel" name="three2" style="width:48px;border:0px;border-right:1px dashed #000" pattern="[0-9]{3}" maxlength="3" minlength="3">
+        <input type="tel" name="three2" style="width:32px;border:0px;border-right:1px dashed #000" pattern="[0-9]{2}" maxlength="2" minlength="2">
+        <input type="tel" name="three2" style="width:64px;border:0px" pattern="[0-9]{4}" maxlength="4" minlength="4">
+    
+    <div style="width:175px;display:inline-block;border-right:1px solid #000;background-color:#fff;border-top:1px solid #000;border-bottom:1px solid #000">
+        <input type="tel" name="four2" style="width:48px;border:0px;border-right:1px dashed #000" pattern="[0-9]{3}" maxlength="3" minlength="3"/>
+        <input type="tel" name="four2" style="width:32px;border:0px;border-right:1px dashed #000" pattern="[0-9]{2}" maxlength="2" minlength="2"/>
+        <input type="tel" name="four2" style="width:64px;border:0px" pattern="[0-9]{4}" maxlength="4" minlength="4"/>
+       </div></div></div></div>
+
+       <!--part3-->
+       <div style="width:175px;display:inline-block;border-right:1px solid #000;background-color:#fff;border-top:1px solid #000">
+        <input type="text" name="one3" style="width:auto;border:0px"/>
+    
+    <div style="width:175px;display:inline-block;border-right:1px solid #000;background-color:#fff;border-top:1px solid #000">
+        <input type="text" name="two3" style="width:auto;border:0px"/>
+    
+    <div style="width:175px;display:inline-block;border-right:1px solid #000;background-color:#fff;border-top:1px solid #000">
+        <input type="text" name="three3" style="width:auto;border:0px"/>
+    
+    <div style="width:175px;display:inline-block;border-right:1px solid #000;background-color:#fff;border-top:1px solid #000;border-bottom:1px solid #000">
+        <input type="text" name="four3" style="width:auto;border:0px"/>
+       </div></div></div></div>
+
+      <!--part4-->
+      <div style="width:175px;display:inline-block;border-right:1px solid #000;border-top:1px solid #000;border-right:1px solid #000">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="checkbox" name="one4"/>
+    <div style="width:175px;display:inline-block;border-right:1px solid #000;border-top:1px solid #000;border-right:1px solid #000">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="checkbox" name="two4"/>
+        <div style="width:175px;display:inline-block;border-right:1px solid #000;border-top:1px solid #000;border-right:1px solid #000">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="checkbox" name="three4"/>
+            <div style="width:175px;display:inline-block;border-right:1px solid #000;border-top:1px solid #000;border-right:1px solid #000;border-bottom:1px solid #000">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                <input type="checkbox" name="four4"/>
+</div></div></div></div>
+
+ <!--part5-->
+ <div style="width:175px;display:inline-block;border-right:1px solid #000;border-top:1px solid #000;border-right:1px solid #000">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="checkbox" name="one5"/>
+    <div style="width:175px;display:inline-block;border-right:1px solid #000;border-top:1px solid #000;border-right:1px solid #000">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="checkbox" name="two5"/>
+        <div style="width:175px;display:inline-block;border-right:1px solid #000;border-top:1px solid #000;border-right:1px solid #000">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="checkbox" name="three5"/>
+            <div style="width:175px;display:inline-block;border-right:1px solid #000;border-top:1px solid #000;border-right:1px solid #000;border-bottom:1px solid #000">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                <input type="checkbox" name="four5"/>
+</div></div></div></div>
+
+<!--Signature-->
+<!--big div-->
+<div style="height:155px;width:1060px;border-bottom:1px solid #000;">
+     <!--sign div-->
+    <div style="position:absolute;width:130px">
+    <span style="font-size:6mm"><b>Sign<br/>Here</b></span>
+    <br/>
+    Joint return?<br/> See instructions. <br/>Keep a copy for <br/>your records.
+    </div>
+   <!--the second big div on the right.it contains two small div-->
+   <div style="position:relative;width:900px;height:137px;top:0px;left:130px"> 
+   <!-- div one on the top-->
+   <div style="position:relative;width:840px;top:0px;left:0px;font-size:2mm">Under penalties of perjury, I declare that I have examined this return and accompanying schedules and statements, and to the best of my knowledge and belief, they are true, correct, and complete. Declaration of preparer (other than taxpayer) is based on all information of which preparer has any knowledge.</div> 
+   <!-- div two on the bottom-->
+   <div>
+   <div style="position:absolute;top:37px;left:0px;width:20px;vertical-align: middle;text-align: center"><br/><br/><b><span style="font-size:small"> &#9658 </span></b> </div>
+   <div style="position:absolute;width:920px;height:60px;background-color: #fff;top:37px;left:20px">
+       <div style="display:inline-block;background-color: #fff;width:350px;position:relative;top:0px;left:0px;border-bottom: 1px solid #000;border-right: 1px solid #000">Your signature<br/>&nbsp;</div>
+       <div style="display:inline-block;background-color: #fff;width:100px;border-bottom: 1px solid #000;border-right: 1px solid #000">Date<br/>&nbsp;</div>
+       <div style="display:inline-block;background-color: #fff;width:230px;border-bottom: 1px solid #000;border-right: 1px solid #000">Your occupation<br/>
+    <input type="text" name="occupation" style="width:auto;border:0"/></div>
+    <div style="display:inline-block;background-color: #fff;width:220px;border-bottom: 1px solid #000">If the IRS sent you an Identity Protection PIN, enter it
+        here (see inst.)
+        <input type="tel" name="pin1" style="width:18px;border-right:1px solid #000;font-size:10px" pattern="[0-9]{1}" maxlength="1"  minlength="1" />
+        <input type="tel" name="pin1" style="width:15px;border-right:1px solid #000;font-size:10px" pattern="[0-9]{1}" maxlength="1"  minlength="1" />
+        <input type="tel" name="pin1" style="width:15px;border-right:1px solid #000;font-size:10px" pattern="[0-9]{1}" maxlength="1"  minlength="1" />
+        <input type="tel" name="pin1" style="width:15px;border-right:1px solid #000;font-size:10px" pattern="[0-9]{1}" maxlength="1"  minlength="1" />
+        <input type="tel" name="pin1" style="width:15px;border-right:1px solid #000;font-size:10px" pattern="[0-9]{1}" maxlength="1"  minlength="1" />
+        <input type="tel" name="pin1" style="width:15px;border-right:1px solid #000;font-size:10px" pattern="[0-9]{1}" maxlength="1"  minlength="1" />
+    </div>
+
+    <div style="position:relative;width:920px;height:60px;background-color: #fff">
+        <div style="display:inline-block;background-color: #fff;width:350px;position:relative;top:0px;left:0px;border-right: 1px solid #000">Spouse’s signature. If a joint return, <b>both</b> must sign.<br/>&nbsp;</div>
+        <div style="display:inline-block;background-color: #fff;width:100px;border-right: 1px solid #000">Date<br/>&nbsp;</div>
+        <div style="display:inline-block;background-color: #fff;width:230px;border-right: 1px solid #000">Spouse’s occupation<br/>
+     <input type="text" name="occupation2" style="width:auto;border:0"/></div>
+     <div style="display:inline-block;background-color: #fff;width:220px">If the IRS sent you an Identity Protection PIN, enter it
+         here (see inst.)
+         <input type="tel" name="pin2" style="width:18px;border-right:1px solid #000;font-size:10px" pattern="[0-9]{1}" maxlength="1"  minlength="1" />
+        <input type="tel" name="pin2" style="width:15px;border-right:1px solid #000;font-size:10px" pattern="[0-9]{1}" maxlength="1"  minlength="1" />
+        <input type="tel" name="pin2" style="width:15px;border-right:1px solid #000;font-size:10px" pattern="[0-9]{1}" maxlength="1"  minlength="1" />
+        <input type="tel" name="pin2" style="width:15px;border-right:1px solid #000;font-size:10px" pattern="[0-9]{1}" maxlength="1"  minlength="1" />
+        <input type="tel" name="pin2" style="width:15px;border-right:1px solid #000;font-size:10px" pattern="[0-9]{1}" maxlength="1"  minlength="1" />
+        <input type="tel" name="pin2" style="width:15px;border-right:1px solid #000;font-size:10px" pattern="[0-9]{1}" maxlength="1"  minlength="1" /></div>
+     </div>
+
+
+</div>
+</div>
+</div>
+</div>
+
+<!--Paid Preparer Use Only-->
+<div style="height:78px;width:1080px;border-bottom:1px solid #000;">
+       <!--left side-->
+            <div style="position:absolute;width:150px">
+            <span style="font-size:6mm"><b>Paid<br/>Preparer<br/>Use Only</b></span></div>
+       <!--right side-->
+            <div style="position:relative;width:920px;top:0px;left:150px;height:78px;background-color: #fff">
+                <!--four sub-div-->
+                
+        
+                    <div style="position:absolute;width:200px;display:inline-block;border-right:1px solid #000;border-bottom:1px solid #000">
+                    Preparer's name<br/>
+                <input type="text" style="width:auto;border:0" ></div>
+                     
+                    <div style="position:absolute;top:0px;left:200px;width:250px;display:inline-block;border-bottom:1px solid #000">
+                    Preparer's signature<br/>&nbsp;
+               </div>
+                     
+                    <div style="position:absolute;top:0px;left:450px;width:140px;display:inline-block;border-left:1px solid #000;border-bottom:1px solid #000">
+                PTIN<br/><input type="tel" style="width:auto;border:0" pattern="[0-9]{10}" maxlength="10"  minlength="10" >
+           </div>
+                     
+                    <div style="position:absolute;top:0px;left:590px;width:140px;border-left:1px solid #000;display:inline-block;border-right:1px solid #000;border-bottom:1px solid #000">
+            Firm's EIN<br/><input type="text" style="width:auto;border:0" >
+
+            <div style=" position:absolute;width:180px;border-bottom:1px solid #000;left:145px;top:0px">
+                Check if:<br/>
+                 <input type="checkbox" name="c">3rd Party Designee<br/>
+                 <input type="checkbox" name="c">Self-employed
+                </div>
+              
+       </div>
+       <div style="position:absolute;width:450px;display:inline-block;left:0px;top:38px;border-bottom:1px solid #000;border-right:1px solid #000">
+        Firm's name  <b><span style="font-size:small"> &#9658 </span></b>  <input type="text"  style="width:auto;border:0">
+        </div>
+        <div style="position:absolute;left:450px;top:38px;width:280px;display:inline-block;border-bottom:1px solid #000;border-right:1px solid #000">
+        Phone no. <input type="tel"  style="width:auto;border:0" pattern="[0-9]{10}" maxlength="10"  minlength="10" >
+         </div>
+
+         <div style="position:absolute;width:920px;display:inline-block;left:0px;top:58px">
+            Firm's address <b><span style="font-size:small"> &#9658 </span></b>  <input type="text"  style="width:auto;border:0">
+            </div>
+         
+            </div>
+</div>
+
+<!--footer-->
+<div>
+    <b>For Disclosure, Privacy Act, and Paperwork Reduction Act Notice, see separate instructions.</b> 
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cat. No. 11320B
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Form <span style="font-size:5mm"><b>1040</b></span> (2018)
+</div>
+<br/>
+<div style="text-align:right">
+    <button style="block-size: 7mm;color: chocolate"><b>Click for the form validation</b></button>
+</div>
+        </form>
+
+            
+    <body>
+</html>

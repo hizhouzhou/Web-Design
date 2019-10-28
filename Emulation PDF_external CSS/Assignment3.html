@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--This is my second assignment.-->
+        <title>Assignment3</title>
+
+        <link rel="stylesheet" type="text/css" href="f1040.css"/>
+    </head>
+
+    <body>
+        <form>
+            <div class="container"> 
+             <!--First line.-->
+             <!--"display:inline-block make multiple divs stays in one line"-->
+             <div class="rotate">Form</div>
+             <div class="bigfont">1040</div>
+             <div class="borderright department"> Department of the Treasury—Internal Revenue Service &nbsp;&nbsp;(99)
+             <br/><span>U.S. Individual Income Tax Return</span></div>
+             <div class="borderright year" >20<b>18</b></div> 
+             <div class="borderright omb" >&nbsp;<br/>OMB No. 1545-0074</div> 
+             <div class="irs">IRS Use Only—Do not write or staple in this space.</div>     
+
+
+            <!--Second line.-->
+            <div class="filingstatus">
+                Filing status:
+            <input type="radio" name="filingstatus" value="Single" />Single
+            <input type="radio" name="filingstatus" value="Married filing jointly"/>Married filing jointly
+            <input type="radio" name="filingstatus" value="Married filing separately"/>Married filing separately
+            <input type="radio" name="filingstatus" value="Head of household"/>Head of household
+            <input type="radio" name="filingstatus" value="Qualifying widow(er)"/>Qualifying widow(er)
+            </div>
+            <div class="white-250"><input class="input" type="text"/></div>
+
+             <!--Third line, Name--> 
+             <div>
+           <div class="namefield borderright">Your first name and initial&nbsp&nbsp&nbsp&nbsp
+            <br/>
+            <input  type="text" name="firstname"  class="input" onkeyup="this.value=this.value.replace(/[^a-zA-Z]/g,'')"/></div>
+
+            <div class="namefield left-400">Last name&nbsp&nbsp&nbsp&nbsp
+                    <br/>
+                    <input  type="text" name="lastname" class="input" onkeyup="this.value=this.value.replace(/[^a-zA-Z]/g,'')"/></div>
+
+                    <div class="ssn" >Your social security number&nbsp&nbsp&nbsp&nbsp
+                            <br/>
+                            <input type="tel" name="ssn" class="ssnone" pattern="[0-9]{3}" maxlength="3" minlength="3">
+                            <input type="tel" name="ssn" class="ssntwo" pattern="[0-9]{2}" maxlength="2" minlength="2">
+                            <input type="tel" name="ssn" class="ssnthree" pattern="[0-9]{4}" maxlength="4" minlength="4">
+                            
+                        </div>          
+                        </div>
+
+            <!--Standard deduction--> 
+           <div class="deduction" >
+            Your standard deduction:
+            <input type="checkbox" name="deduction" value="dependent"/> Someone can claim you as a dependent &nbsp&nbsp&nbsp
+            <input type="checkbox" name="deduction" value="birthday"/> You were born before January 2, 1954 &nbsp&nbsp&nbsp
+            <input type="checkbox" name="deduction" value="blind"/>You are blind &nbsp&nbsp&nbsp
+           </div>
+
+            <!--Spouse Name--> 
+            <div>
+            <div class="namefield borderright" >If joint return, spouse's first name and initial&nbsp&nbsp&nbsp&nbsp
+                <br/>
+                <input type="text" name="firstname" class="input"  onkeyup="this.value=this.value.replace(/[^a-zA-Z]/g,'')"/></div>
+
+                <div class="namefield left-400">Last name&nbsp&nbsp&nbsp&nbsp
+                        <br/>
+                        <input  type="text" name="lastname" class="input" onkeyup="this.value=this.value.replace(/[^a-zA-Z]/g,'')"/></div>
+
+                        <div class="ssn">Spouse's social security number&nbsp&nbsp&nbsp&nbsp
+                                <br/>
+                                <input type="tel" name="ssn" class="ssnone" pattern="[0-9]{3}"  maxlength="3" minlength="3">
+                                <input type="tel" name="ssn" class="ssntwo" pattern="[0-9]{2}"  maxlength="2" minlength="2">
+                                <input type="tel" name="ssn" class="ssnthree" pattern="[0-9]{4}"  maxlength="4" minlength="4">
+                            </div>
+                                </div>
+
+        <!--Spouse standard deduction--> 
+        <div>
+           <div class="spouse_deduction" >
+            Spouse standard deduction:
+            <input type="checkbox" name="deduction" value="dependent"/> Someone can claim your spouse as a dependent &nbsp
+            <input type="checkbox" name="deduction" value="birthday"/> Spouse was born before January 2, 1954 &nbsp
+            <input type="checkbox" name="deduction" value="blind"/>Spouse is blind &nbsp&nbsp&nbsp
+            <input type="checkbox" name="deduction" value="dual-status"/>Spouse itemizes on a separate return or you were dual-status alien
+            
+           </div>
+           <div class="left-800">
+               <input type="checkbox" name="health" value="health"/>Full-year health care coverage or exempt (see inst.)
+           </div>
+        </div>
+
+         <!--Home Address-->
+         <div class="address">Home address (number and street). If you have a P.O. box, see instructions.
+            <br/>
+        <input type="text" name="address" class="input"/></div>
+               <div class="left-700">Apt. no.
+            <br/>
+        <input type="text" name="aptnumber" class="input-50"/></div>
+               <div class="left-800"><b>Presidential Election Campaign</b>
+            <br/>
+            (see inst.)&nbsp;
+        <input type="checkbox" name="election" value="you"/><b>You</b>
+        <input type="checkbox" name="election" value="spouse"/><b>Spouse</b></div>
+
+          <!--City-->
+          <div class="spouse_deduction white-800">City, town or post office, state, and ZIP code. If you have a foreign address, attach Schedule 6.
+            <br/>
+        <input type="text" name="city" class="input" /></div>
+        <div class="left-800">If more than four dependents,<br/>
+            see inst. and &#10004 here <b><span class="icon"> &#9658 </span></b> 
+        <input type="checkbox" name="morethanfour" value="morethanfour"/></div>
+
+          <!--Dependents-->
+          <div>
+          <div class="dependents"><b>dependents</b>(see instructures)
+            <br/>
+        <b>(1)</b>First name   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Last name</div>
+    
+            <div class="left-350">
+        <b>(2)</b>Social security number<br/>&nbsp;</div>
+    
+            <div class="left-525">
+            <b>(3)</b>Relationship to you<br/>&nbsp;</div>
+    
+            <div class="left-710">
+                <b>(4)</b>&#10004 if qualifies for (see inst.):
+            <br/>
+            Child tax credit &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Credit for other dependents</div>
+        </div>
+
+         <!--line-->
+         <!--part1-->
+
+         <div class="line-350">
+            <input type="text" name="one" class="input"/>
+        
+        <div class="line-350">
+            <input type="text" name="two" class="input"/>
+        
+        <div class="line-350">
+            <input type="text" name="three" class="input"/>
+        
+        <div class="line-350">
+            <input type="text" name="four" class="input"/>
+           </div></div></div></div>
+
+            <!--part2-->
+          
+            <div class="left-350-2">  
+                <div class="line-175">
+                    <input type="tel" name="one2" class="input-48" pattern="[0-9]{3}" maxlength="3" minlength="3"/>
+                    <input type="tel" name="one2" class="input-32" pattern="[0-9]{2}" maxlength="2" minlength="2">
+                    <input type="tel" name="one2" class="input-50" pattern="[0-9]{4}" maxlength="4" minlength="4"/>
+                  <div class="line-175">
+                    <input type="tel" name="two2" class="input-48" pattern="[0-9]{3}" maxlength="3" minlength="3">
+                    <input type="tel" name="two2" class="input-32" pattern="[0-9]{2}" maxlength="2" minlength="2">
+                    <input type="tel" name="two2" class="input-50" pattern="[0-9]{4}" maxlength="4" minlength="4">
+                
+                <div class="line-175">
+                    <input type="tel" name="three2" class="input-48" pattern="[0-9]{3}" maxlength="3" minlength="3">
+                    <input type="tel" name="three2" class="input-32" pattern="[0-9]{2}" maxlength="2" minlength="2">
+                    <input type="tel" name="three2" class="input-50" pattern="[0-9]{4}" maxlength="4" minlength="4">
+                
+                <div class="line-175">
+                    <input type="tel" name="four2" class="input-48" pattern="[0-9]{3}" maxlength="3" minlength="3"/>
+                    <input type="tel" name="four2" class="input-32" pattern="[0-9]{2}" maxlength="2" minlength="2"/>
+                    <input type="tel" name="four2" class="input-50" pattern="[0-9]{4}" maxlength="4" minlength="4"/>
+                   </div></div></div></div>
+                </div>
+             <!--part3-->
+             <div  class="left-350-3">
+       <div class="line-175 width-174">
+        <input type="text" name="one3" class="input"/>
+    
+    <div class="line-175 width-174">
+        <input type="text" name="two3" class="input"/>
+    
+    <div class="line-175 width-174">
+        <input type="text" name="three3" class="input"/>
+    
+    <div class="line-175 width-174">
+        <input type="text" name="four3" class="input"/>
+       </div></div></div></div>
+
+    </div>
+
+      <!--part4-->
+      <div class="left-350-4">
+      <div class="line-195 wh2 width-195">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="checkbox" name="one4" value="Child tax credit"/>
+        <div class="line-195 wh width-195">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="checkbox" name="two4" value="Child tax credit"/>
+            <div class="line-195 wh width-195">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" name="three4" value="Child tax credit"/>
+                <div class="line-195 wh3 width-195">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                    <input type="checkbox" name="four4" value="Child tax credit"/>
+    </div></div></div></div>
+    
+</div>
+
+ <!--part5-->
+ <div class="left-350-5">
+    <div class="line-195 wh2 width-195">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="checkbox" name="one4" value="Credit for other dependents"/>
+      <div class="line-195 wh width-195">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="checkbox" name="two4" value="Credit for other dependents"/>
+          <div class="line-195 wh width-195">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="checkbox" name="three4" value="Credit for other dependents"/>
+              <div class="line-195 wh3 width-195">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                  <input type="checkbox" name="four4" value="Credit for other dependents"/>
+  </div></div></div></div>
+  
+</div>
+
+<!--Signature-->
+<!--big div-->
+<div class="big">
+    <!--sign div-->
+   <div class="signdiv">
+   <span >Sign<br/>Here</span>
+   <br/><br/>
+   Joint return?<br/> See instructions. <br/>Keep a copy for <br/>your records.
+   </div>
+
+    <!--the second big div on the right.it contains two small div-->
+    <div class="secondbig"> 
+        <!-- div one on the top-->
+        <div class="secondtop">Under penalties of perjury, I declare that I have examined this return and accompanying schedules and statements, and to the best of my knowledge and belief, they are true, correct, and complete. Declaration of preparer (other than taxpayer) is based on all information of which preparer has any knowledge.</div> 
+        <!-- div two on the bottom-->
+        <div>
+        <div class="bigicon"><br/><br/><span class='icon bigger'> &#9658 </span> </div>
+        <div class="secondbottom">
+            <div class="leftone">Your signature<br/>&nbsp;</div>
+            <div class="date">Date<br/><input type="date" name="date" value="date1" /></div>
+            <div class="occupation">Your occupation<br/><input type="text" name="occupation"  class="input"/></div>
+            <div class="identitypin">If the IRS sent you an Identity Protection PIN, enter it here (see inst.)&nbsp;&nbsp;
+                <input type="tel" name="pin1" class="inputpin" pattern="[0-9]{1}" maxlength="1"  minlength="1" />
+                <input type="tel" name="pin1" class="inputpin" pattern="[0-9]{1}" maxlength="1"  minlength="1" />
+                <input type="tel" name="pin1" class="inputpin" pattern="[0-9]{1}" maxlength="1"  minlength="1" />
+                <input type="tel" name="pin1" class="inputpin" pattern="[0-9]{1}" maxlength="1"  minlength="1" />
+                <input type="tel" name="pin1" class="inputpin" pattern="[0-9]{1}" maxlength="1"  minlength="1" />
+                <input type="tel" name="pin1" class="inputpin" pattern="[0-9]{1}" maxlength="1"  minlength="1" />
+            </div>
+
+            <div class="leftone top-50">Spouse’s signature. If a joint return, <span>both</span> must sign.<br/>&nbsp;</div>
+            <div class="date top-50">Date<br/><input type="date" name="date" value="date2" /></div>
+            <div class="occupation top-50"> Spouse’s occupation<br/><input type="text" name="occupation"  class="input"/></div>
+            <div class="identitypin top-50">If the IRS sent you an Identity Protection PIN, enter it here (see inst.)&nbsp;&nbsp;
+                <input type="tel" name="pin1" class="inputpin" pattern="[0-9]{1}" maxlength="1"  minlength="1" />
+                <input type="tel" name="pin1" class="inputpin" pattern="[0-9]{1}" maxlength="1"  minlength="1" />
+                <input type="tel" name="pin1" class="inputpin" pattern="[0-9]{1}" maxlength="1"  minlength="1" />
+                <input type="tel" name="pin1" class="inputpin" pattern="[0-9]{1}" maxlength="1"  minlength="1" />
+                <input type="tel" name="pin1" class="inputpin" pattern="[0-9]{1}" maxlength="1"  minlength="1" />
+                <input type="tel" name="pin1" class="inputpin" pattern="[0-9]{1}" maxlength="1"  minlength="1" />
+            </div>
+    </div>
+    </div>
+    </div>
+</div><!--end of signature-->
+
+<!--Paid Preparer Use Only-->
+
+<div class="paid">
+    <!--left side-->
+         <div class="paid-left">
+         <span>Paid<br/>Preparer<br/>Use Only</span></div>
+    <!--right side-->
+
+         <div class="secondbottom height-78">
+             <!--four sub-div-->
+                 <div class="preparername">
+                 Preparer's name<br/>
+             <input type="text" class="input"></div>
+                  
+                 <div class="preparsign">
+                 Preparer's signature<br/>&nbsp;
+            </div>
+                  
+                 <div class="ptin">
+             PTIN<br/><input type="tel" class="input" pattern="[0-9]{10}" maxlength="10"  minlength="10" name="ptin">
+        </div>
+                  
+                 <div class="ein">
+         Firm's EIN<br/><input type="text" class="input" name="ein"></div>
+
+         <div class="lastcheck">
+             &nbsp;&nbsp;Check if:<br/>
+              <input type="checkbox" name="c" value="3rd Party Designee">3rd Party Designee<br/>
+              <input type="checkbox" name="c" value="Self-employed">Self-employed
+             </div>
+           
+    
+    <div class="preparername width-470">
+     Firm's name <span class="icon"> &#9658 </span>  <input type="text" class="input" name="firmname">
+     </div>
+     <div class="phone">
+     Phone no. <input type="tel"  class="input" pattern="[0-9]{10}" maxlength="10"  minlength="10"  name="phone">
+      </div>
+
+      <div class="firmaddress">
+         Firm's address<span class="icon"> &#9658 </span> <input type="text"  class="input" name="firmaddress">
+         </div>
+      
+         </div>
+
+</div><!--end of pay part-->
+
+<!--footer-->
+<footer class="footer">
+    <b>For Disclosure, Privacy Act, and Paperwork Reduction Act Notice, see separate instructions.</b> 
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cat. No. 11320B
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Form <span>1040</span> (2018)
+</footer>
+
+<br/>
+<!--second page-->
+ <!--first line-->
+ <div class="firstline">&nbsp;&nbsp;Form 1040 (2018)
+    <span class="floatright">page <b>2&nbsp;&nbsp;</b></span> 
+</div>
+
+  <!--contains 18 lines-->
+          <div class="multiplelines">
+              <!--left side-->
+              <div class="leftside">
+                  <br/>Attach Form(s)<br/>W-2. Also attach<br/>Form(s) W-2G and<br/>1099-R if tax was<br/>withheld.
+                  <br/>
+                  <div class="frame">
+                    <b>&nbsp;Standard <br/>&nbsp;Deduction for—</b>
+                  <ul>
+                      <li>Single or married<br/>filling seperately,<br/>$12,000</li>
+                      <li>Married filing<br/>jointly or Qualifying<br/>widow(er),<br/>$24,000</li>
+                      <li>Head of<br/>household,<br/>$18,000</li>
+                      <li>If you checked <br/>any box under <br/>Standard<br/>deduction,<br/>see instruction.</li>
+                  </ul>
+                  </div>
+              </div>
+
+               <!--right side-->
+              <div class="rightside">
+               <!--first part on right-->
+               <div class="main">
+                <div class="right660"><b>1</b> &nbsp;&nbsp;&nbsp;Wages, salaries, tips, etc. Attach Form(s) W-2. . . . .  . . . . .  . . . . . . . . . . . . . . . . .  . .  . . . . .  . . . . . . . .</div>
+                <div class="number"><b>1</b></div>
+
+                <div class="right-250"><b>2a</b>&nbsp;&nbsp;Tax-exempt interest. . . . .  . . . . . .</div>
+                <div class="tablenumber"><b>2a</b></div>
+                <div class="tableone wl1"><input type="text" class="input"></div>
+                <div class="tableone wl2"><input type="text" class="inputtable"></div>
+                <div class="tableone wl3"><b>b</b> Taxable interest.  . . . .</div>
+                <div class="number top-2"><b>2b</b></div>
+
+                <div class="right-250"><b>3a</b>&nbsp;&nbsp;Qualified dividends. . . . .  . . . . . .</div>
+                <div class="tablenumber t36"><b>3a</b></div>
+                <div class="tableone wl4"><input type="text" class="input"></div>
+                <div class="tableone wl2 wl4"><input type="text" class="inputtable"></div>
+                <div  class="tableone wl3 wl4"><b>b</b> Ordinary dividends. .  </div>
+                <div class="number top-3"><b>3b</b></div>
+
+                <div class="right-250"><b>4a</b>&nbsp;&nbsp;IRAs, pensions, and annuities. . . </div>
+                <div class="tablenumber t54"><b>4a</b></div>
+                <div class="tableone wl5"><input type="text" class="input"></div>
+                <div class="tableone wl2 wl5"><input type="text"class="inputtable"></div>
+                <div  class="tableone wl3 wl5"><b>b</b> Taxable amount. . . . . </div>
+                <div class="number top-4"><b>4b</b></div>
+
+                <div class="right-250"><b>5a</b>&nbsp;&nbsp;Social security benefits. . . . .  . . .</div>
+                <div class="tablenumber t72"><b>5a</b></div>
+                <div class="tableone wl6"><input type="text" class="input"></div>
+                <div class="tableone wl2 wl6"><input type="text" class="inputtable"></div>
+                <div class="tableone wl3 wl6"><b>b</b> Taxable amount. . . . .</div>
+                <div class="number top-5"><b>5b</b></div><br/>
+
+                <div class="right660"><b>6</b>&nbsp;&nbsp;&nbsp;Total income. Add lines 1 through 5. Add any amount from Schedule 1, line 22 <input type="text" class="input80">. . . . . </div>
+                    <div  class="number top-6"><b><br/>6</b></div>
+
+                    <div class="right660"><b>7</b> &nbsp;&nbsp;&nbsp;Adjusted gross income. If you have no adjustments to income, enter the amount from line 6; otherwise, subtract Schedule 1, line 36, from line 6. . . . .  . . . . .  . . . . . . . . . . . . . . . . .  . .  . . . . .  . . . . . . . .</div>
+                    <div class="number top-7"><b><br/>7</b></div>
+
+                    <div class="right660 t168"><span class="block8"><b>8</b></span>.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Standard deduction or itemized deductions </b>(from Schedule A)  . . . .  .  . .  . . . . .  . . . . . . . . . . . . .</div>
+                    <div class="number top-8"><b>8</b></div>
+
+                    <div class="right660 t190"><b>9</b> &nbsp;&nbsp;&nbsp;Qualified business income deduction (see instructions).  . . . . .  . . . . . . . . . . . . . . . . .  . .  . . . . .  . . . . .</div>
+                    <div class="number top-9"><b>9</b></div>
+
+                    <div class="right660 t208"><b>10</b> &nbsp;&nbsp;&nbsp;Taxable income. Subtract lines 8 and 9 from line 7. If zero or less, enter -0-. . . . . . . . . . . . .  . . . . .</div>
+                    <div class="number top-10"><b>10</b></div>
+
+                    <div class="right660 t226"><b>11</b> &nbsp;&nbsp;&nbsp;<b>a</b> Tex (see inst.) <input type="text" class="input50"> (check if any from:
+                        <b>1</b> <input type="checkbox" name="from" value="Form(s) 8814">Form(s) 8814&nbsp;&nbsp;
+                        <b>2</b> <input type="checkbox" name="from" value="Form 4972">Form 4972&nbsp;&nbsp;
+                        <b>3</b> <input type="checkbox" name="from"><input type="text" class="input50">)<br/>
+                   <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b Add &nbsp;</b>any amount from Schedule 2 and check here. . . . . . . . . . . . .  .  . .  . . . . . . .  . . . . . . . . . <span class="icon"> &#9658 </span>  <input type="checkbox" name="add" value="add"></div>
+                   <div class="number top-11"><b><br/>11</b></div>
+
+                   <div class="right660 t262"><b>12 &nbsp;&nbsp;&nbsp;a</b> Child tax credit/credit for other dependents <input type="text" class="input50">
+                    <b>b Add</b> any amount from Schedule 3 and check here &#9658 <input type="checkbox" name="add"></span></div>
+                 <div class="number top-12"><b>12</b></div>
+
+
+                 <div class="right660 t280"><b>13</b> &nbsp;&nbsp;&nbsp;Subtract line 12 from line 11. If zero or less, enter -0-.  . . . . .  . . . . . . . . . . . . . . . . .  . .  . . . . .  . . . . .</div>
+                 <div class="number top-13"><b>13</b></div>
+
+                 <div class="right660 t298"><b>14</b> &nbsp;&nbsp;&nbsp;Other taxes. Attach Schedule 4.  . . . . .  . . . . . . . . . .  .  . . .  .  . . . . . . . . . . . . . . . . . . . . .  . .  . . . . .  . . . . .</div>
+                 <div  class="number top-14"><b>14</b></div>
+
+                 <div class="right660 t313"><b>15</b> &nbsp;&nbsp;&nbsp;Total tax. Add lines 13 and 14.  . . . . .  . . . . . . . . . . . . .  . . .  .  .  . . . . . . .  . . . . . . . . . . . .  . .  . . . . .  . . . .</div>
+                 <div class="number top-15"><b>15</b></div>
+
+                 <div class="right660 t328"><b>16</b> &nbsp;&nbsp;&nbsp;Federal income tax withheld from Forms W-2 and 1099.  . . .  . . . . . . . . . . . . . . . . .  . .  . . . . .  . . . . .</div>
+                 <div class="number top-16"><b>16</b></div>
+
+                 <div class="right660 t352"><b>17</b> &nbsp;&nbsp;&nbsp;Refundable credits: <b>a </b> EIC (see inst.)<input type="text" class="input50">&nbsp;&nbsp;<b>b</b> Sch. 8812<input type="text" class="input80">&nbsp;&nbsp;<b>c </b>Form 8863<input type="text" class="input80"><br/>
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Add </b>any amount from Schedule 5 <input type="text" class="input50">. . . . .  . . . . . . . . . .  .  . . .  .  . . . . . . . . . . . . . . . .  . .  . . . . . </div>
+                 <div class="number top-17"><b><br/>17</b></div>
+
+                 <div  class="right660 t370"><b>18</b> &nbsp;&nbsp;&nbsp;Add lines 16 and 17. These are your total payments .  . . . . . . . . . . . . . . . . . . . . . . .  . .  . . . . .  . . . . .</div>
+                 <div class="number top-18"><b><br/>18</b></div>
+
+                  <!--second part on right-->
+              <div class="lineright">
+                <div class="line170"><input type="text" class="input"></div>
+                <div class="line40"><input type="text" class="inputtable"></div>
+
+                <div class="line170 top-2"><input type="text" class="input"></div>
+                <div class="line40 top-2"><input type="text" class="inputtable"></div>
+
+                <div class="line170 top-3"><input type="text" class="input"></div>
+                <div class="line40 top-3"><input type="text" class="inputtable"></div>
+
+                <div class="line170 top4"><input type="text" class="input"></div>
+                <div class="line40 top4"><input type="text" class="inputtable"></div>
+
+                <div class="line170 top5"><input type="text" class="input"></div>
+                <div class="line40 top5"><input type="text" class="inputtable"></div>
+
+                <div class="line170 top6"><input type="text" class="input"></div>
+                <div class="line40 top6"><input type="text" class="inputtable"></div>
+
+                <div class="line170 top7"><input type="text" class="input"></div>
+                <div class="line40 top7"><input type="text" class="inputtable"></div>
+
+                <div class="line170 top8"><input type="text" class="input"></div>
+                <div class="line40 top8"><input type="text" class="inputtable"></div>
+ 
+                <div class="line170 top9"><input type="text" class="input"></div>
+                <div class="line40 top9"><input type="text" class="inputtable"></div>
+
+                <div class="line170 top10"><input type="text" class="input"></div>
+                <div class="line40 top10"><input type="text" class="inputtable"></div>
+
+                <div class="line170 top11"><input type="text" class="input"></div>
+                <div class="line40 top11"><input type="text" class="inputtable"></div>
+
+                <div class="line170 top12"><input type="text" class="input"></div>
+                <div class="line40 top12"><input type="text" class="inputtable"></div>
+
+                <div class="line170 top13"><input type="text" class="input"></div>
+                <div class="line40 top13"><input type="text" class="inputtable"></div>
+
+                <div class="line170 top14"><input type="text" class="input"></div>
+                <div class="line40 top14"><input type="text" class="inputtable"></div>
+
+                <div class="line170 top15"><input type="text" class="input"></div>
+                <div class="line40 top15"><input type="text" class="inputtable"></div>
+
+                <div class="line170 top16"><input type="text" class="input"></div>
+                <div class="line40 top16"><input type="text" class="inputtable"></div>
+
+                <div class="line170 top17"><input type="text" class="input"></div>
+                <div class="line40 top17"><input type="text" class="inputtable"></div>
+
+                <div class="line170 top18"><input type="text" class="input"></div>
+                <div class="line40 top18"><input type="text" class="inputtable"></div>
+              
+          </div><!--second part on right  end-->
+</div><!--end of right side-->
+</div><!--end of multiplelines-->
+
+ <!--second layer:left+right-->
+ <div class="secondlayer">
+        
+    <!--left side-->
+    <div class="secondleftside">
+        <br/><span>Refund</span>
+        <br/><br/><span class="smallfont">Direct deposit?<br/>See instructions.</span>
+    </div>
+
+ <!--right side-->
+               <!--first part on right-->
+               <div class="secondrightside">
+                 
+                <div class="right660"><b>19</b> &nbsp;&nbsp;&nbsp;If line 18 is more than line 15, subtract line 15 from line 18. This is the amount you <b>overpaid</b>  . . . </div>
+                <div class="number"><b>19</b></div>
+
+                <div class="right660"><b>20a</b> &nbsp;&nbsp;&nbsp;Amount of line 19 you want <b>refunded to you.</b> If Form 8888 is attached, check here  . . .  <span class="icon"> &#9658 </span>  <input type="checkbox" name="check" value="check"></div>
+                <div class="number top-2"><b>20a</b></div>
+
+                <div class="right660"><b> <span class="icon">&#9658</span> b</b> &nbsp;&nbsp;&nbsp;Routing number 
+                    <input type="tel" name="routingnumber" class="routing" pattern="[0-9]{1}" maxlength="1" minlength="1" />
+                    <input type="tel" name="routingnumber" class="routing" pattern="[0-9]{1}" maxlength="1" minlength="1" />
+                    <input type="tel" name="routingnumber" class="routing" pattern="[0-9]{1}" maxlength="1" minlength="1" />
+                    <input type="tel" name="routingnumber" class="routing" pattern="[0-9]{1}" maxlength="1" minlength="1" />
+                    <input type="tel" name="routingnumber" class="routing" pattern="[0-9]{1}" maxlength="1" minlength="1" />
+                    <input type="tel" name="routingnumber" class="routing" pattern="[0-9]{1}" maxlength="1" minlength="1" />
+                    <input type="tel" name="routingnumber" class="routing" pattern="[0-9]{1}" maxlength="1" minlength="1" />
+                    <input type="tel" name="routingnumber" class="routing" pattern="[0-9]{1}" maxlength="1" minlength="1" />
+                    <input type="tel" name="routingnumber" class="routing" pattern="[0-9]{1}" maxlength="1" minlength="1" />
+                    
+                    <b><span class="icon">&#9658</span> c </b> Type: 
+                    <input type="checkbox" name="accounttype" value="checking"> Checking
+                    <input type="checkbox" name="accounttype" value="saving"> Savings. . . .
+                    </div>
+                    <div class="number top-3 grey">&nbsp;</div>
+
+                    <div class="right660">
+                        <b><span class="icon">&#9658</span> d</b> &nbsp;&nbsp;&nbsp;Account number 
+                    <input type="tel" name="accountnumber" class="routing" pattern="[0-9]{1}" maxlength="1" minlength="1"/>
+                    <input type="tel" name="accountnumber" class="routing" pattern="[0-9]{1}" maxlength="1" minlength="1"/>
+                    <input type="tel" name="accountnumber" class="routing" pattern="[0-9]{1}" maxlength="1" minlength="1"/>
+                    <input type="tel" name="accountnumber" class="routing" pattern="[0-9]{1}" maxlength="1" minlength="1"/>
+                    <input type="tel" name="accountnumber" class="routing" pattern="[0-9]{1}" maxlength="1" minlength="1"/>
+                    <input type="tel" name="accountnumber" class="routing" pattern="[0-9]{1}" maxlength="1" minlength="1"/>
+                    <input type="tel" name="accountnumber" class="routing" pattern="[0-9]{1}" maxlength="1" minlength="1"/>
+                    <input type="tel" name="accountnumber" class="routing" pattern="[0-9]{1}" maxlength="1" minlength="1"/>
+                    <input type="tel" name="accountnumber" class="routing" pattern="[0-9]{1}" maxlength="1" minlength="1"/>
+                    <input type="tel" name="accountnumber" class="routing" pattern="[0-9]{1}" maxlength="1" minlength="1"/>
+                    <input type="tel" name="accountnumber" class="routing" pattern="[0-9]{1}" maxlength="1" minlength="1"/>
+                    <input type="tel" name="accountnumber" class="routing" pattern="[0-9]{1}" maxlength="1" minlength="1"/>
+                    <input type="tel" name="accountnumber" class="routing" pattern="[0-9]{1}" maxlength="1" minlength="1"/>
+                    <input type="tel" name="accountnumber" class="routing" pattern="[0-9]{1}" maxlength="1" minlength="1"/>
+                    <input type="tel" name="accountnumber" class="routing" pattern="[0-9]{1}" maxlength="1" minlength="1"/>
+                    <input type="tel" name="accountnumber" class="routing" pattern="[0-9]{1}" maxlength="1" minlength="1"/>
+                    <input type="tel" name="accountnumber" class="routing" pattern="[0-9]{1}" maxlength="1" minlength="1"/>
+                  
+                    <div class="number top-4 grey2">&nbsp;</div>
+                    
+                    <div class="line21"> 
+                        <b>21</b> &nbsp;&nbsp;&nbsp;Amount of line 19 you want <b>applied to your 2019 estimated tax</b>. . .<b><span class="icon">&#9658</span></b>
+                    </div>
+                    <div class="line21s"><b>21</b></div>
+                    <div class="line21s tlw"><input type="text" class="input80"></div>
+                    <div class="line21s tlw2"><input type="text" class="inputtable"></div>
+                    <div class="number top-5 grey2">&nbsp;</div>
+
+
+                    <div class="linerighth">
+                        <div class="line170"><input type="text" class="input"></div>
+                        <div class="line40"><input type="text" class="inputtable"></div>
+        
+                        <div class="line170 top-2"><input type="text" class="input"></div>
+                        <div class="line40 top-2"><input type="text" class="inputtable"></div>
+                        <div class="line1702">&nbsp;</div>
+                 </div>
+                 </div>
+    </div><!--end of second layer:left+right-->
+
+        <!--third layer:left+right-->
+        <div class="thirdlayer">
+        
+            <!--left side-->
+            <div class="leftside3">
+               <b>Amount You Owe</b>
+            </div>
+
+              <!--right side-->
+                   <!--first part on right-->
+                   <div class="rightside3">
+                 
+                    <div class="right660">
+                        <b>22</b> &nbsp;&nbsp;&nbsp;<b>Amount you owe.</b> Subtract line 18 from line 15. For details on how to pay, see instructions  . . . <span class="icon">&#9658</span>
+                    </div>
+                    
+                    <div class="number"><b>22</b></div>
+
+                    <div class="line23"> 
+                        <b>23</b> &nbsp;&nbsp;&nbsp;Estimated tax penalty (see instructions) . . . . . . . . . . . . . . . . . . . . . .<b><span class="icon">&#9658</span></b>
+                    </div>
+                    <div class="line23s"><b>23</b></div>
+                    <div class="line23 lwb"><input type="text" class="input80"></div>
+                    <div class="line23s lwb2"><input type="text" class="inputtable"></div>
+                    <div class="line23s lwb3 grey">&nbsp;</div>
+
+                    <div  class="linerighth height36">
+                        <div class="line170"><input type="text" class="input"></div>
+                        <div class="line40"><input type="text" class="inputtable"></div>
+                        <div class="lastposition">&nbsp;</div>
+                        
+                  </div>
+
+                </div>
+</div>
+ <!--footer-->
+           
+ <div class="footer2">&nbsp;&nbsp;Go to <i>www.irs.gov/Form1040</i> for instructions and the latest information.
+    <span class="floatright">Form <span>1040</span> (2018) &nbsp;&nbsp;</span> <br/>&nbsp;<br/>
+    <button class="button">Click for the form validation</button>
+</div> 
+<br/>
+
+            </div><!--end of container-->
+        </form>
+    </body>
+</html>
