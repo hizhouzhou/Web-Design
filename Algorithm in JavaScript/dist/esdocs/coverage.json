@@ -1,0 +1,22 @@
+{
+  "coverage": "100%",
+  "expectCount": 7,
+  "actualCount": 7,
+  "files": {
+    "src/BinarySearch.js": {
+      "expectCount": 2,
+      "actualCount": 2,
+      "undocumentLines": []
+    },
+    "src/BubbleSort.js": {
+      "expectCount": 3,
+      "actualCount": 3,
+      "undocumentLines": []
+    },
+    "src/PalindromeCheck.js": {
+      "expectCount": 2,
+      "actualCount": 2,
+      "undocumentLines": []
+    }
+  }
+}

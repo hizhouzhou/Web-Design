@@ -1,0 +1,28 @@
+@import "./../app.component.scss";
+@mixin margin-top($top){
+    margin-top: $top;
+    -ms-margin-top: $top;
+    -moz-margin-top: $top;
+    -webkit-margin-top: $top; 
+}
+
+#addPage{
+    @include  margin-top(-535px);
+    border:3px dashed $brand-color;
+    width:300px;
+    height:300px;
+    font-weight:bold;
+    float:right;
+    padding:20px;
+}
+label{
+    color:$title-color;
+}
+
+button{
+    color:$title-color;
+    background-color: $border-color;
+    border:2px solid $brand-color;
+    border-radius: 3px;
+
+}

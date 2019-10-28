@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Image Cropping</title>
+        <link href="main.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+        <!-- the container for the whole page -->
+          <div id="crop_image">
+
+               <!-- title -->
+              <div id="crop_image_top">
+                  <h1>Crop your picture:</h1>
+              </div>
+
+
+              <!-- content -->
+              <div id="crop_image_content">
+
+                  <!-- cropped part -->
+                  <div id="cropBox">
+                      <!-- upload the picture -->
+                      <img id="img1" alt="1" src="images/demo.jpg">
+                      <img id="img2" alt="2" src="images/demo.jpg">
+
+                      <!-- crop grid lines -->
+                      <div id="cropLine">
+                          <div id="left-up" class="minBox left-up"></div>
+                          <div id="up" class="minBox up"></div>
+                          <div id="right-up" class="minBox right-up"></div>
+                          <div id="left" class="minBox left"></div>
+                          <div id="right" class="minBox right"></div>
+                          <div id="left-down" class="minBox left-down"></div>
+                          <div id="down" class="minBox down"></div>
+                          <div id="right-down" class="minBox right-down"></div>
+                      </div>
+                  </div><!-- end of cropped part -->
+
+                  <!-- preview part -->
+                  <div id="preview">
+                      <img id="cropimg3" alt="3" src="images/demo.jpg">
+                  </div>
+              </div>
+
+              <!-- bottom (icon)-->
+              <div id="crop_image_bottom">
+                  <!-- <input class="btn" type="button" value="Crop"> -->
+                  <button id="btn">Click here to crop!</button>
+              </div>
+             
+          </div>
+<script type="text/javascript" src="clip_image.js"></script>
+    </body>
+</html>

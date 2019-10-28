@@ -1,0 +1,20 @@
+
+        <div *ngFor ="let item of target | async">
+                <label> First name: </label>  {{item.first}}
+                <label> Last name: </label>{{item.last}}
+                      <label>Email:</label> {{item.email}}
+                              <label> Phone: </label>{{item.phone}}
+               </div>
+<div class='entry'  [class.contact]="classObject.contact">
+    <div class="first" ><p>{{displayObject.first}}</p></div>
+    <!-- <div class="last" ><p>{{displayObject.last}}</p></div>
+    <div class="email" ><p>{{displayObject.email}}</p></div>
+    <div class="phone"  ><p>{{displayObject.phone}}</p></div> -->
+   
+    <div class="view"><p><button class="viewbtn" (click)="view(contact.phone)">View </button><p></div>
+</div>
+
+
+             
+
+

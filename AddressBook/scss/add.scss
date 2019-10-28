@@ -1,0 +1,117 @@
+// for the add button
+@mixin margin-left($left){
+    margin-left: $left;
+    -ms-margin-left: $left;
+    -moz-margin-left: $left;
+    -webkit-margin-left: $left; 
+}
+
+@mixin margin-top($top){
+    margin-top: $top;
+    -ms-margin-top: $top;
+    -moz-margin-top: $top;
+    -webkit-margin-top: $top; 
+}
+
+@mixin  border-radius($radius){
+    border-radius:$radius;
+    -ms-border-radius:$radius;
+    -moz-border-radius:$radius;
+    -webkit-border-radius:$radius;
+}
+
+#add,#cancel{
+    border:3px dashed $brand-color;
+    width:60px;
+    height:60px;
+    color:$title-color;
+    transition:color .25s;
+    float:right;
+    position:relative;
+}
+#cancel{
+    float:left;
+    display:none;
+}
+
+#add:before,#cancel:before{
+    content:'';
+    position:absolute;
+    left:50%;
+    top:50%;
+    width:50px;
+    @include  margin-left(-25px);
+    @include  margin-top(-5px);
+    border-top:10px solid;
+}
+#cancel:before{
+    transform: rotate(20deg);
+    @include  margin-top(5px);
+}
+
+#add:after,#cancel:after{
+    content:'';
+    position:absolute;
+    left:50%;
+    top:50%;
+    height:50px;
+    @include  margin-left(-5px);
+    @include  margin-top(-25px);
+    border-left:10px solid;
+}
+#cancel:after{
+    transform: rotate(70deg);
+    @include  margin-top(-31px);
+}
+
+#add:hover,#cancel:hover{
+    color:$brand-color;
+    transform:scale(1.1);
+}
+
+// dynamic-part
+#dynamic-box{
+  
+    @include  margin-top(64px);
+    border:3px dashed $brand-color;
+    max-width:595px;
+    max-height:530px;
+    font-size:1.5em;
+    font-weight:bold;
+    color:$title-color;
+    padding:50px 100px;
+    height:430px;
+    display: none;
+  
+}
+#dynamic-box input{
+    border:2px solid $border-color;
+    width:200px;
+    height:30px;
+    font-size:8mm;
+    color:$brand-color;
+    float: right;
+}
+
+#save button{
+    float:right;
+    width:80px;
+    height:40px;
+    @include margin-top(40px);
+    color:$title-color;
+    border:3px dashed $brand-color;
+    font-weight:bold;
+    font-size:7mm;
+    transition:color.25s;
+}
+#save button:hover{
+    color:$border-color;
+    transform: scale(1.1);
+}
+
+.view button{
+    background-color: $border-color;
+    border-radius: 5px;
+    color:white;
+    
+}

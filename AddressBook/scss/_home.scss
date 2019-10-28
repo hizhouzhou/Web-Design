@@ -1,0 +1,19 @@
+body {
+    background-color: rgba($brand-color, 0.1);
+}
+
+.title {
+    margin-top: 50px;
+    // width: 100%;
+    margin-left: 300px;
+    color: $title-color;
+}
+
+#container{
+    width: 600px;
+    height:600px;
+    margin-left: 300px;
+    margin-right: 300px;
+    border:5px solid $border-color;
+}
+

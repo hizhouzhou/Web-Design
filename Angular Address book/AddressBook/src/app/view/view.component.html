@@ -1,0 +1,7 @@
+<div id="record-box">
+  <div *ngFor="let item of contactsChild">
+    <app-list [contact]="item" ></app-list>
+       
+      </div>   
+  </div>
+  <app-contact (newContactEmitted)="addContact($event)"></app-contact>

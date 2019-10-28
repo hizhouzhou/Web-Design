@@ -1,0 +1,120 @@
+<div class="Bar-Chart">
+    <div class="bar bar1"></div>
+    <div class="bar bar2"></div>
+    <div class="bar bar3"></div>
+    <div class="bar bar4"></div>
+    <div class="bar bar5"></div>
+    <div class="bar bar6"></div>
+    <div class="bar bar7"></div>
+    <div class="bar bar8"></div>
+    <div class="bar bar9"></div>
+    <div class="bar bar10"></div>
+  </div>
+
+
+  /*variables*/
+$data-amount:10; 
+$name:"Matt" "Steve" "Mark" "Jade" "Ray" "Oliver" "Barry" "Felicity" "Malcom" "Ted";
+$data:50% 40% 70% 22% 35% 40% 85% 36% 88% 62%;
+$width:500px;
+$height:250px;
+$color:rgb(127, 128, 160) rgb(196, 196, 202) rgb(62, 108, 168) rgb(119, 149, 189) rgb(183, 190, 201) rgb(93, 125, 177) rgb(143, 172, 180) rgb(154, 197, 209) rgb(183, 189, 219) rgb(147, 134, 168);
+
+/*selector*/
+.Bar-Chart{
+  position:relative;
+  width:$width;
+  height:$height;
+  background-color:#dce7ec;
+  margin:20% auto 0px auto;
+  transform:translate(-50%,-60%);
+}
+.Bar-Chart:after{
+  content:"second line";
+  color:#dce7ec;
+  width:100%;
+  height:1px;
+  background-color:#fff;
+  position:absolute;
+  top:50%;
+}
+.Bar-Chart:before{
+  content:"first and third line";
+  color:#dce7ec;
+  width:100%;
+  height:50%;
+  background:transparent;
+  position:absolute;
+  top:25%;
+  border-top:1px solid #fff;
+  border-bottom:1px solid #fff;
+}
+.bar{
+  width:4%;
+  position:absolute;
+  bottom:0px;
+  z-index:1;
+ float:left;
+}
+@for $i from 1 through $data-amount {
+    .bar#{$i} {
+       background:nth($color,$i);
+       height:0px;
+       left:$width/($data-amount+1) * $i - 10;
+       -webkit-animation: showBar#{$i} 1.2s $i*.1s forwards;
+       -moz-animation: showBar#{$i} 1.2s $i*.1s forwards;
+       animation: showBar#{$i} 1.2s $i*.1s forwards;
+    }
+}
+.bar:before{
+  position:absolute;
+  top:-16px;
+  font-size:12px;
+  color:#333;
+  font-family:"roboto";
+  font-weight:300;
+}
+@for $i from 1 through $data-amount {
+    .bar#{$i}:before {
+        content:nth($data,$i)+"";
+    }
+}
+.bar:after{
+  position:absolute;
+  bottom:-55px;
+  transform:rotate(30deg);
+  color:#666;
+  font-size:14px;
+  text-align:left;
+  font-family:"roboto";
+  font-weight:300;
+  width:150px;
+}
+@for $i from 1 through $data-amount {
+    .bar#{$i}:after{
+        content:nth($name,$i)+"";
+    }
+}
+
+@for $i from 1 through $data-amount {
+      @-webkit-keyframes showBar#{$i} {
+    0%   {height: 0px;}
+    100%  {height: nth($data,$i);}
+  }
+}
+@for $i from 1 through $data-amount {
+      @-moz-keyframes showBar#{$i} {
+    0%   {height: 0px;}
+    100%  {height: nth($data,$i);}
+  }
+}
+@for $i from 1 through $data-amount {
+      @keyframes showBar#{$i} {
+    0%   {height: 0px;}
+    100%  {height: nth($data,$i);}
+  }
+}
+
+
+
+https://codepen.io/hizhouzhou/pen/pGdrjG

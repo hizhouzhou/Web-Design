@@ -1,0 +1,169 @@
+/* the container */
+#crop_image{
+    float: left;
+    width: 55%;
+    height:600px;
+    background-color: darkorange;
+    border: 1px solid #DEDEDE;
+    user-select: none;
+    margin: 1% 1%;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+}
+
+#crop_image_top,#crop_image_bottom {
+    float: left;
+    width: 96%;
+    padding: 2%;
+    background-color: white;
+}
+
+/* to make the crop icon right */
+#crop_image_bottom {
+    text-align: right;
+    position:relative;
+    top:-220px;
+}
+
+/* the css of botton */
+#btn{
+    height: 30px;
+    padding: 5px 15px;
+    border-radius: 3px;
+    border: none;
+    margin-left: 20px;
+    outline: none;
+}
+
+#btn:hover{
+    background-color: rgb(80, 118, 150);
+}
+btn:active{
+    background-color: rgb(17, 67, 107);
+}
+
+
+/* cropped part */
+#crop_image_content {
+    float: left;
+    position: relative;
+    text-align: center;
+    width: 92%;
+    height:100%;
+    margin: 4%;
+}
+#cropBox {
+    position: relative;
+}
+/* picture */
+#img1 {
+  
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#img2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    clip: rect(0px, 200px, 200px, 0px);
+    /* top right bottom left分别指最终剪裁可见区域的上边，右边，下边与左边。而所有的数值都表示位置，且是相对于原始元素的左上角而言的。 */
+}
+
+#crop_image_content #cropLine {
+    border: 1px solid white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    cursor: move;
+    display: none;
+}
+
+/* boudary */
+.minBox {
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    background-color: white;
+}
+
+.left-up {
+    top: -4px;
+    left: -4px;
+    cursor: nw-resize; 
+    /* cursor属性定义当光标放在一个元素的边界内时，光标的样式。 s:south e:east n:north w:west*/
+}
+
+.up {
+    left: 50%;
+    margin-left: -4px;
+    top: -4px;
+    cursor: n-resize;
+}
+
+.right-up {
+    right: -4px;
+    top: -4px;
+    cursor: ne-resize;
+}
+
+.left {
+    top: 50%;
+    margin-top: -4px;
+    left: -4px;
+    cursor: w-resize;
+}
+
+.right {
+    top: 50%;
+    margin-top: -4px;
+    right: -4px;
+    cursor: w-resize;
+}
+
+.left-down {
+    bottom: -4px;
+    left: -4px;
+    cursor: sw-resize;
+}
+
+.down {
+    bottom: -4px;
+    left: 50%;
+    margin-left: -4px;
+    cursor: s-resize;
+}
+
+.right-down {
+    bottom: -4px;
+    right: -4px;
+    cursor: se-resize;
+}
+
+/* preview part */
+#preview {
+    position:absolute;
+    top:0px;
+    left:500px;
+    width:459px;
+    height:306px;
+}
+
+#preview img {
+
+    position: absolute;
+    width: auto;
+    height:auto;
+    max-width:100%;
+    min-width:100%;
+
+}
+
