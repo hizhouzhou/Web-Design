@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.1.xsd">
+
+    <bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"/>
+
+    <!--
+    Most controllers will use the ControllerClassNameHandlerMapping above, but
+    for the index controller we are using ParameterizableViewController, so we must
+    define an explicit mapping for it.
+    -->
+    <bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="mappings">
+            <props>
+                <prop key="index.htm">indexController</prop>
+                <!--login and register-->
+                <prop key="login.htm">LoginController</prop>
+                <prop key="register.htm">RegisterController</prop>
+                
+                <!--profile-->
+                <prop key="profile.htm">ProfileController</prop>
+                 <prop key="profile2.htm">Profile2Controller</prop>
+                 
+                 <!--create new course (coach)-->
+                 <prop key="course.htm">CourseController</prop>
+                 
+                 <!--get coach's course-->
+                 <prop  key="mycourse.htm">CoachMyCourseController</prop>
+                 <prop key="usermycourse.htm">SubscribeController</prop>
+                 
+                 <!--user get all videos-->
+                 <prop key="moreVideos.htm">MoreVideosController</prop>
+                 
+                 <!--user get video detail-->
+                 <prop key="detail.htm">DetailController</prop>
+                 
+                 <!--user subscribe-->
+                 <prop key="subscribe.htm">SubscribeController</prop>
+                 
+                 <!--unsubscribe-->
+                 <prop key="cancel.htm">CancelController</prop>
+                 
+                 <!--coach delete course-->
+                 <prop key="delete.htm">deleteController</prop>
+                 
+                 <!--user search course-->
+                 <prop key="search.htm">searchController</prop>
+                 
+                 <!--coach see user-->
+                 <prop key="coachseeuser.htm">CoachSeeUserController</prop>
+                 
+                 <!--user see coach-->
+                 <prop key="userseecoach.htm">UserSeeCoachController</prop>
+            </props>
+        </property>
+    </bean>
+
+
+    <bean id="viewResolver"
+          class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+          p:prefix="/WEB-INF/jsp/"
+          p:suffix=".jsp" />
+
+    <!--
+    The index controller.
+    -->
+    <bean name="indexController"
+          class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+          p:viewName="index" />
+    
+    <!--login-->
+     <bean name="LoginController" class="zzz.controller.LoginController">
+           <property name="validator">
+            <bean class="zzz.validator.LoginValidator"/>
+           </property>
+     </bean>
+
+    <!--Register-->
+       <bean name="RegisterController" class="zzz.controller.RegisterController">
+        <property name="validator">
+            <bean class="zzz.validator.RegisterValidator"/>
+           </property>
+       </bean>
+       
+       <!--Profile-->
+       <bean name="ProfileController" class="zzz.controller.ProfileController" />
+       <bean name="Profile2Controller" class="zzz.controller.Profile2Controller" />
+       
+       <!--Course-->
+       <bean name="CourseController" class="zzz.controller.CourseController">
+           <property name="validator">
+            <bean class="zzz.validator.CourseValidator"/>
+           </property>
+          </bean>
+       
+       <!--coach get his course-->
+       <bean name="CoachMyCourseController" class="zzz.controller.CoachMyCourseController" />
+
+       <!--all videos-->
+       <bean name="MoreVideosController" class="zzz.controller.MoreVideosController" />
+       
+       <!--get course detail-->
+       <bean name="DetailController" class="zzz.controller.DetailController" />
+       
+       <!--subscribe-->
+       <bean name="SubscribeController" class="zzz.controller.SubscribeController" />
+       
+       <!--unsubscribe-->
+       <bean name="CancelController" class="zzz.controller.CancelController" />
+       
+       <!--delete the video-->
+       <bean name="deleteController" class="zzz.controller.deleteController" />
+       
+       <!--search the video-->
+       <bean name="searchController" class="zzz.controller.searchController" />
+       
+       <!--coach see user-->
+       <bean name="CoachSeeUserController" class="zzz.controller.CoachSeeUserController" />
+       
+       <!--user see coach-->
+       <bean name="UserSeeCoachController" class="zzz.controller.UserSeeCoachController" />
+       
+</beans>

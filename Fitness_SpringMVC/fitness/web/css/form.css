@@ -1,0 +1,190 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2019-4-18, 14:19:53
+    Author     : zhouzhou
+*/
+
+h2, h3, h4, h5, h6 {
+    font-family: "Raleway";
+    font-weight: 300;
+    color: #333;
+  }
+  
+  /* Paragraph & Typographic */
+  
+  p {
+    line-height: 28px;
+    margin-bottom: 25px;
+  }
+  
+ 
+  hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+  }
+ 
+  .desc {
+    padding-top: 50px;
+  }
+  
+  .desc p {
+    color: #2f2f2f;
+  }
+  
+  .desc label {
+    color: #34495e;
+    font-weight: 700;
+  }
+  .btn{
+      border:2px solid #F1C40F;
+  }
+
+  .img{
+    position:absolute;
+    top:65px;
+    left:14px;
+    width:1200px;
+    }
+
+.joinus{
+     color:white;
+     font-weight:bold;
+       font-size:12mm;
+       position:absolute;
+       top:180px;
+       left:100px;
+}
+.menu-label{
+   color:#F1C40F;
+   }
+   
+   #container2{
+    padding:40px;
+    border:1px solid #F0F0F0
+
+}
+
+
+h1{
+    margin-bottom:50px;
+    margin-left:50px;
+    margin-top:30px;
+}
+
+.col{
+   
+    margin-right:50px;
+    margin-bottom:50px;
+   
+}
+
+.btn-primary{
+    background-color: palevioletred;
+    border: 1px solid #F0F0F0;
+    margin-left: 30px;
+}
+
+.likeVideo{
+    margin-top:5px;
+}
+
+.favorite{
+    margin-top:5px;
+}
+
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+
+.media{
+    margin-left:200px;
+    margin-top:30px;
+}
+
+h2{
+    color:#333;
+    font-size:20px;
+    font-weight: bold;
+}
+.detail-header{
+    font-size: 15px;
+    font-family:sans-serif;
+    font-weight: bold;
+}
+.detail-value{
+     font-size: 13px;
+}
+
+.btn-success{
+    background-color: palevioletred;
+    border: 1px solid #F0F0F0;
+    margin-left: 20px;
+}
+.btn-success:hover{
+      background-color: #bb7e9c;
+       border: 1px solid #F0F0F0;
+}
+
+
+.btn-warning{
+    margin-left:20px;
+}
+
+
+.feed{
+    margin-top:30px;
+}
+
